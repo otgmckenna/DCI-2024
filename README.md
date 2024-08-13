@@ -71,7 +71,7 @@ For the majority of my analyses, I will not be using the 'GE1_Rep2', 'GE1_Perf2'
 
 To start, I wanted to take a look at a correlation matrix to see the relation between each of the variables.
 
-![Correlation Matrix](Plots\CorrelationMatrix.png)
+![Correlation Matrix](https://github.com/otgmckenna/DCI-2024/blob/main/Plots/CorrelationMatrix.png)
 
 As might be expected, there's a pretty strong correlation amongst everything. One thing that stuck out immediately is the lower-than-average correlation between MP_Cont, MP_Achv and MP_Tot and the rest of the variables. Through speculation with some of my peers in the drum corps activity, we've settled on this likely being due to how percussion works in the drum corps activity.
 
@@ -93,7 +93,7 @@ When looking at the descriptive stats of the dataset, we can see the stats for t
 
 Let's break this down further. To start, let's compare the means of each of the three main categories.
 
-![Barplot comparing the mean values of the variables](Plots\Means.png)
+![Barplot comparing the mean values of the variables](https://github.com/otgmckenna/DCI-2024/blob/main/Plots/Means.png)
 
 Since the margin is so small across the board here, let's perform a quick ANOVA test to see if there actually is any statistical significance.
 
@@ -175,7 +175,7 @@ And, just for the hell of it, let's perform a Tukey's HSD test just to take a cl
 
 Let's take a quick look at standard deviation now, to see what the variation of each variable looks like:
 
-![Barplot showing the standard deviation](Plots\StandardDeviation.png)
+![Barplot showing the standard deviation](https://github.com/otgmckenna/DCI-2024/blob/main/Plots/StandardDeviation.png)
 
 We can see that Perucssion has a standard deviation that is a bit greater than the average
 
@@ -185,7 +185,7 @@ It should finally be pointed out that scoring in drum corps is subjective, despi
 
 Now that I mention the activity having a heaping dose of subjectivity, let's go ahead and see which corps are objectively the best by ranking them based on their final Total score.
 
-![Rankings of the World and Open class corps at the end of the season](Plots\Ranking.png)
+![Rankings of the World and Open class corps at the end of the season](Plots/Ranking.png)
 
 The Bluecoats from Canton, OH, took home gold this year, beating out the 2nd place Boston Crusaders from Boston, MA, and the 3rd place Blue Devils from Concord, CA.
 
