@@ -1,2 +1,2 @@
-# DCI-2024
+# Drum Corps International 2024
  
