@@ -71,7 +71,7 @@ For the majority of my analyses, I will not be using the 'GE1_Rep2', 'GE1_Perf2'
 
 To start, I wanted to take a look at a correlation matrix to see the relation between each of the variables.
 
-![Correlation Matrix](https://github.com/otgmckenna/DCI-2024/blob/main/Plots/CorrelationMatrix.png)
+![Correlation Matrix](Plots/CorrelationMatrix.png)
 
 As might be expected, there's a pretty strong correlation amongst everything. One thing that stuck out immediately is the lower-than-average correlation between MP_Cont, MP_Achv and MP_Tot and the rest of the variables. Through speculation with some of my peers in the drum corps activity, we've settled on this likely being due to how percussion works in the drum corps activity.
 
@@ -93,7 +93,7 @@ When looking at the descriptive stats of the dataset, we can see the stats for t
 
 Let's break this down further. To start, let's compare the means of each of the three main categories.
 
-![Barplot comparing the mean values of the variables](https://github.com/otgmckenna/DCI-2024/blob/main/Plots/Means.png)
+![Barplot comparing the mean values of the variables](Plots/Means.png)
 
 Since the margin is so small across the board here, let's perform a quick ANOVA test to see if there actually is any statistical significance.
 
@@ -104,6 +104,7 @@ In our case, we will be setting our alpha to 0.05; any P-value smaller than 0.05
 **Our H1 (alternative hypothesis) will be:** The difference in means of Percussion scores compared to other scores is statistically significant.
 
 Looking at the results of our ANOVA test for each of the three groups, we get this:
+
 `ANOVA test for Content: F-value = 0.7766216816152612, P-value = 0.5664424738144958`
 
 `ANOVA test for Achievement: F-value = 0.5393703927105752, P-value = 0.7465806478309788`
@@ -175,7 +176,7 @@ And, just for the hell of it, let's perform a Tukey's HSD test just to take a cl
 
 Let's take a quick look at standard deviation now, to see what the variation of each variable looks like:
 
-![Barplot showing the standard deviation](https://github.com/otgmckenna/DCI-2024/blob/main/Plots/StandardDeviation.png)
+![Barplot showing the standard deviation](Plots/StandardDeviation.png)
 
 We can see that Perucssion has a standard deviation that is a bit greater than the average
 
@@ -186,6 +187,8 @@ It should finally be pointed out that scoring in drum corps is subjective, despi
 Now that I mention the activity having a heaping dose of subjectivity, let's go ahead and see which corps are objectively the best by ranking them based on their final Total score.
 
 ![Rankings of the World and Open class corps at the end of the season](Plots/Ranking.png)
+
+I've colored the bars based on the corp's class. This gives us a better look at how each class stacks up in the final rankings.
 
 The Bluecoats from Canton, OH, took home gold this year, beating out the 2nd place Boston Crusaders from Boston, MA, and the 3rd place Blue Devils from Concord, CA.
 
@@ -198,3 +201,83 @@ Some quick facts, if you're unfamiliar:
 * The Blue Devils have 21 1st place finishes (including two ties), most of any drum corps by a wide margin. In second is the now-defunct The Cadets from Allentown, PA with 10 (one tie).
 
 It was an exciting year, to say the least.
+
+Now, let's take a look at some score distributions, starting off with Total and the three major Captions: General Effect (GE_Tot), Visual (Vis_Tot) and Music (Mus_Tot).
+
+![Score distributions of Total, GE_Tot, Vis_Tot and Mus_Tot](Plots/ScoresDistribution.png)
+
+Here are the descriptive stats:
+
+### Score Distributions - Descriptive Stats
+
+|       | Total      | GE_Tot     | Vis_Tot    | Mus_Tot    |
+|-------|------------|------------|------------|------------|
+| count | 542.000000 | 542.000000 | 542.000000 | 542.000000 |
+| mean  | 77.243173  | 30.959041  | 23.109225  | 23.181375  |
+| std   | 10.409718  | 4.146588   | 3.146771   | 3.171661   |
+| min   | 45.800000  | 18.000000  | 13.450000  | 13.650000  |
+| 25%   | 70.462500  | 28.400000  | 21.200000  | 21.050000  |
+| 50%   | 77.425000  | 31.000000  | 23.100000  | 23.250000  |
+| 75%   | 84.928500  | 33.993750  | 25.337500  | 25.550000  |
+| max   | 98.750000  | 39.650000  | 29.650000  | 29.450000  |
+
+There are no really surprising trends here. Everything is distributed in a realtively normal way, as seen by the red dashed curves on the distribution plots above.
+
+Let's break this down even further, seeing how the scores get distributed based on Class.
+
+### World Class Distributions
+
+![World class corps score distributions](Plots/WorldDistribution.png)
+
+### Open Class Distributions
+
+![Open class corps score distributions](Plots/OpenDistribution.png)
+
+We can see that while the World class distributions look more uniform, Open class has some more peaks scattered throughout their distributions, moving away from the previously normal distribution when classes were combined. Again, this is likely due to the varying degrees of talent and season length of some of the younger Open class corps.
+
+Having mentioned length of a corps' tour, let's take a look at how many times each corps performed throughout the summer. This can help us hone in on whether or not the number of performances impacts a corps' scores.
+
+![Barplot showing number of performances for each corps](Plots/NumPerformances.png)
+
+With a max performance count of 24 and a min of 4, we can see there's a pretty good range of performance counts. We can also see that Open class corps have fewer performances on average, with an average performance count of 11.88, whereas World class corps perform an average of 19.08 times.
+
+Let's look take a look at a few scatter plots now to see if there's any correlation between number of performances and the main caption scores. However, for this, let's look at each corps' final scores; looking at a final stat like number of performances and comparing it to a running stat such as an entire season's worth of scores isn't fitting.
+
+![Scatterplot showing relationship between number of performances and the three main score variables](Plots/NumPerformancesVsScores.png)
+
+Even though the scatter points are somewhat sparse here now that we've filtered out all scores prior to each corps' final performance, we can see there is a relationship here.
+
+Let's now take a look at the R^2 values.
+
+### World Class
+
+`World Total R^2: 0.30924823082612585, Adjusted R^2: 0.2728928745538167`
+
+`World GE_Tot R^2: 0.3128868375206688, Adjusted R^2: 0.2767229868638619`
+
+`World Vis_Tot R^2: 0.32140508691676817, Adjusted R^2: 0.28568956517554545`
+
+`World Mus_Tot R^2: 0.2821444468179922, Adjusted R^2: 0.24436257559788654`
+
+### Open Class
+
+`Open Total R^2: 0.6118601720659191, Adjusted R^2: 0.582003262224836`
+
+`Open GE_Tot R^2: 0.5807340882399009, Adjusted R^2: 0.5484828642583548`
+
+`Open Vis_Tot R^2: 0.6063617266608128, Adjusted R^2: 0.5760818594808752`
+
+`Open Mus_Tot R^2: 0.636082265204573, Adjusted R^2: 0.6080885932972324`
+
+### Overall
+
+`Overall Total R^2: 0.7424706233694873, Adjusted R^2: 0.7348962299391781`
+
+`Overall GE_Tot R^2: 0.735309311236244, Adjusted R^2: 0.7275242909784865`
+
+`Overall Vis_Tot R^2: 0.7402798459843105, Adjusted R^2: 0.7326410179250256`
+
+`Overall Mus_Tot R^2: 0.7435144637898464, Adjusted R^2: 0.7359707715483713`
+
+As we can see from the values above, World class has the lowest R^2 and Adjusted R^2 values, telling us there is little explanation in how number of performances influences the scores.
+
