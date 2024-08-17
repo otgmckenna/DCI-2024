@@ -182,7 +182,7 @@ We can see that Perucssion has a standard deviation that is a bit greater than t
 
 Both of these factors can contribute to the observed differences in correlation values: Percussion tends to have a greater than average variance in scores, and its average score is higher than the averages of the other variables. However, it's important to note that correlation measures the strength and direction of a linear relationship between two variables, so these factors alone do not fully explain the differences in correlation.
 
-It should finally be pointed out that scoring in drum corps is subjective, despite the insistence on following pre=established judging guidelines. The activity employs several different judges throughout the season, so no corps will ever be score by the same set of judges all summer. Some judges may score harsher than others, while some may have some inherent bias towards certain corps. While my objective with this section was to explain the activity purely on numbers, it's a tough task when the activity is so heavily reliant on art, an infamously subjective field.
+It should finally be pointed out that scoring in drum corps is subjective, despite the insistence on following pre-established judging guidelines. The activity employs several different judges throughout the season, so no corps will ever be score by the same set of judges all summer. Some judges may score harsher than others, while some may have some inherent bias towards certain corps. While my objective with this section was to explain the activity purely on numbers, it's a tough task when the activity is so heavily reliant on art, an infamously subjective field.
 
 Now that I mention the activity having a heaping dose of subjectivity, let's go ahead and see which corps are objectively the best by ranking them based on their final Total score.
 
@@ -247,37 +247,37 @@ Let's look take a look at a few scatter plots now to see if there's any correlat
 
 Even though the scatter points are somewhat sparse here now that we've filtered out all scores prior to each corps' final performance, we can see there is a relationship here.
 
-Let's now take a look at the R^2 values.
+Let's now take a look at the R² values.
 
 ### World Class
 
-`World Total R^2: 0.30924823082612585, Adjusted R^2: 0.2728928745538167`
+`World Total R²: 0.30924823082612585, Adjusted R²: 0.2728928745538167`
 
-`World GE_Tot R^2: 0.3128868375206688, Adjusted R^2: 0.2767229868638619`
+`World GE_Tot R²: 0.3128868375206688, Adjusted R²: 0.2767229868638619`
 
-`World Vis_Tot R^2: 0.32140508691676817, Adjusted R^2: 0.28568956517554545`
+`World Vis_Tot R²: 0.32140508691676817, Adjusted R²: 0.28568956517554545`
 
-`World Mus_Tot R^2: 0.2821444468179922, Adjusted R^2: 0.24436257559788654`
+`World Mus_Tot R²: 0.2821444468179922, Adjusted R²: 0.24436257559788654`
 
 ### Open Class
 
-`Open Total R^2: 0.6118601720659191, Adjusted R^2: 0.582003262224836`
+`Open Total R²: 0.6118601720659191, Adjusted R²: 0.582003262224836`
 
-`Open GE_Tot R^2: 0.5807340882399009, Adjusted R^2: 0.5484828642583548`
+`Open GE_Tot R²: 0.5807340882399009, Adjusted R²: 0.5484828642583548`
 
-`Open Vis_Tot R^2: 0.6063617266608128, Adjusted R^2: 0.5760818594808752`
+`Open Vis_Tot R²: 0.6063617266608128, Adjusted R²: 0.5760818594808752`
 
-`Open Mus_Tot R^2: 0.636082265204573, Adjusted R^2: 0.6080885932972324`
+`Open Mus_Tot R²: 0.636082265204573, Adjusted R²: 0.6080885932972324`
 
 ### Overall
 
-`Overall Total R^2: 0.7424706233694873, Adjusted R^2: 0.7348962299391781`
+`Overall Total R²: 0.7424706233694873, Adjusted R²: 0.7348962299391781`
 
-`Overall GE_Tot R^2: 0.735309311236244, Adjusted R^2: 0.7275242909784865`
+`Overall GE_Tot R²: 0.735309311236244, Adjusted R²: 0.7275242909784865`
 
-`Overall Vis_Tot R^2: 0.7402798459843105, Adjusted R^2: 0.7326410179250256`
+`Overall Vis_Tot R²: 0.7402798459843105, Adjusted R²: 0.7326410179250256`
 
-`Overall Mus_Tot R^2: 0.7435144637898464, Adjusted R^2: 0.7359707715483713`
+`Overall Mus_Tot R²: 0.7435144637898464, Adjusted R²: 0.7359707715483713`
 
-As we can see from the values above, World class has the lowest R^2 and Adjusted R^2 values, telling us there is little explanation in how number of performances influences the scores.
+The R² values calculated here indicate the proportion of variance in the dependent variables (Total, GE_Tot, Vis_Tot, and Mus_Tot) that is predictable from the independent variable (Number of Performances). The Overall statistics have the highest R² values, suggesting that when considering the overall trend of the data without specifying class, the model provides a much stronger explanation. The Open class values, which are not far behind the Overall values, indicate a stronger-than-average explanation of how the dependent variables are influenced by the independent variable. This implies that the relationship between the number of performances and the scores is more pronounced in the Open class compared to the World class.
 
